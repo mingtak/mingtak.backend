@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="plone">
+    <head>
+        
+    </head>
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<script src="/Plone/++plone++mingtak.backend/jquery.uploadify.min.js"></script>
+<script src="/Plone/++plone++mingtak.backend/tinymce.min.js"></script>
+<script src="/Plone/++plone++mingtak.backend/all.js"></script>
+
+<link rel="stylesheet" href="/Plone/++plone++mingtak.backend/index.css"/>
+
+
+    <form action="show_view" method="POST">
+        標題：<input type="text" name="title" />
+        描述:<input type="text" name="description" />
+        <br>
+        <textarea  id="tinymce"></textarea>
+        
+        <input type="file" name="image_title" id="inp_img" >
+        <input type="file" name="filetitle" id="filetitle" >
+        
+        <img id="img" height="150">
+        <button type="submit" >送出</button>
+        <textarea name="b64_image" id="b64_image" cols="30" rows="10" style='visibility: hidden'></textarea>
+        <textarea name="b64_file" id="b64_file" cols="30" rows="10" style='visibility: hidden'></textarea>
+    </form>
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+

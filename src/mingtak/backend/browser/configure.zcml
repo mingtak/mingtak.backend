@@ -17,5 +17,25 @@
       type="plone"
       directory="static"
       />
-
+  <browser:page
+    name="add_document_view"
+    for="*"
+    layer="zope.interface.Interface"
+    class=".views.AddDocumentView"
+    template="template/add_document_view.pt"
+    permission="zope2.View"
+  />
+ 
+   <browser:page
+    name="show_view"
+    for="*"
+    layer="zope.interface.Interface "
+    class=".views.ShowView "
+    permission="zope2.View"
+  />
+  <plone:static
+     directory="static"
+     type="plone"
+     name="tinymce"
+     />
 </configure>
