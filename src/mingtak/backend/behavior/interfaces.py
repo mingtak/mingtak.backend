@@ -7,16 +7,15 @@ from zope import schema
 from zope.interface import alsoProvides
 from zope.interface import Interface
 
-class IVotableLayer(Interface):
-    """Marker interface for the Browserlayer
-    """
 
-# Ivotable is the marker interface for contenttypes who support this behavior
+class IVotableLayer(Interface):
+    """Marker interface for the Browserlayer"""
+
+
 class IVotable(Interface):
     pass
 
-# This is the behaviors interface. When doing IVoting(object), you receive an
-# adapter
+
 class IVoting(model.Schema):
     if not api.env.debug_mode():
         directives.omitted("votes")
