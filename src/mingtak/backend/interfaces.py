@@ -12,6 +12,7 @@ from plone.supermodel import model
 from plone.supermodel.directives import fieldset
 from zope.interface import alsoProvides
 
+
 class IMingtakBackendLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
